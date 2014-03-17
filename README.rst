@@ -25,13 +25,13 @@ Configuration
 
 #. Add the middleware to the list of ``MIDDLEWARE_CLASSES``::
 
-  MIDDLEWARE_CLASSES = (
-      'django.middleware.common.CommonMiddleware',
-      'django.contrib.sessions.middleware.SessionMiddleware',
-      'django.middleware.csrf.CsrfViewMiddleware',
-      'django.contrib.auth.middleware.AuthenticationMiddleware',
-      'authaction.middleware.AuthActionMiddleware',
-  )
+   MIDDLEWARE_CLASSES = (
+       'django.middleware.common.CommonMiddleware',
+       'django.contrib.sessions.middleware.SessionMiddleware',
+       'django.middleware.csrf.CsrfViewMiddleware',
+       'django.contrib.auth.middleware.AuthenticationMiddleware',
+       'authaction.middleware.AuthActionMiddleware',
+   )
 
 #. Map actions to conditions in the ``AUTH_ACTION_CONDITIONS``
    setting::
