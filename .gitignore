@@ -9,4 +9,4 @@ develop-eggs
 tmp
 build
 dist
-*.egg/
+*.egg

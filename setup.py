@@ -31,4 +31,7 @@ setup(
     zip_safe=False,
     install_requires=install_requires,
     test_suite='authaction.tests',
+    tests_require=[
+        'factory-boy',
+    ],
 )

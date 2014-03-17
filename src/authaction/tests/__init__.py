@@ -2,6 +2,12 @@ import glob
 import os
 import sys
 
+from django.conf import settings
+try:
+    settings.configure()
+except RuntimeError:
+    pass
+
 
 def setup():
     """Perform test runner setup.
