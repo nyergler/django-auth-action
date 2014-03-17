@@ -50,7 +50,7 @@ manager.
 
 For example, to use a decorator::
 
-  from authaction import auth_action_required
+  from authaction.guard import auth_action_required
 
   @auth_action_required('add_to_cart')
   def add_to_cart(request):
