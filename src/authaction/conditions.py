@@ -24,6 +24,12 @@ def is_anonymous(user, session):
     )
 
 
+def forbidden(user, session):
+    """Always forbid access."""
+
+    raise authaction.exceptions.ConditionFailed()
+
+
 def backend_required(backend):
     """Return authaction condition that requires the specified backend."""
 
