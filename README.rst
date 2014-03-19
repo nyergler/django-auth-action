@@ -17,30 +17,30 @@ Configuration
 
 #. Add ``authactions`` to the list of ``INSTALLED_APPS``::
 
-   INSTALLED_APPS = (
-       'django.contrib.auth',
-       'django.contrib.sessions',
-       'authaction',
-   )
+    INSTALLED_APPS = (
+        'django.contrib.auth',
+        'django.contrib.sessions',
+        'authaction',
+    )
 
 #. Add the middleware to the list of ``MIDDLEWARE_CLASSES``::
 
-   MIDDLEWARE_CLASSES = (
-       'django.middleware.common.CommonMiddleware',
-       'django.contrib.sessions.middleware.SessionMiddleware',
-       'django.middleware.csrf.CsrfViewMiddleware',
-       'django.contrib.auth.middleware.AuthenticationMiddleware',
-       'authaction.middleware.AuthActionMiddleware',
-   )
+    MIDDLEWARE_CLASSES = (
+        'django.middleware.common.CommonMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'authaction.middleware.AuthActionMiddleware',
+    )
 
 #. Map actions to conditions in the ``AUTH_ACTION_CONDITIONS``
    setting::
 
-   AUTH_ACTION_CONDITIONS = {
-       'add_to_cart': authaction.conditions.logged_in,
-       'checkout': authaction.conditions.logged_in_within(
-           datetime.timedelta(minutes=5)),
-   }
+    AUTH_ACTION_CONDITIONS = {
+        'add_to_cart': authaction.conditions.logged_in,
+        'checkout': authaction.conditions.logged_in_within(
+            datetime.timedelta(minutes=5)),
+    }
 
 Checking Authorization
 ======================
